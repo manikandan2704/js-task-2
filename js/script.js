@@ -5,18 +5,18 @@ const bikes = [
     { bike: 'pulsor', model: 'version-4', mileage: '45km/pl', rate: '1,20,000', qty: 0 },
 ];
 
+
 let input1 = [];
 
 function userinputs() {
     let input = prompt("enter the value");
     let result = bikes.find(function (item) {
         return item.bike === input;
-
+        bikes.qty+=1
     })
     input1.push(result);
     console.log(input1);
 }
-
 
 function userdel() {
     let a = (prompt("delete your protect"))
@@ -24,12 +24,18 @@ function userdel() {
     console.log(input1)
 }
 
-
 function inc() {
-    let input2 = prompt("enter the value");
-    let result2=input2
-
+    let inc=prompt("enter the value");
+     input1.find(item=>{
+        if (item.bike === inc){
+            item.qty+=1;
+        }
+       
+    });   
+ console.log(input1)
 }
+
+ 
 
 
 function dec() {
